@@ -1,0 +1,1183 @@
+<html>
+  <head>
+    <link rel = "icon" href = "Picture2.png" type = "image/x-icon">
+    <title>The Artsy Lens</title>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Rancho&display=swap');
+
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body
+{
+  overflow-x: hidden;
+  background: #fff;
+  min-height: 100vh;
+}
+#header
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+
+#header .logo
+{
+  color: #094b65;
+  font-weight: 700;
+  font-size: 2em;
+  text-decoration: none;
+}
+
+#header ul
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#header ul li
+{
+  list-style: none;
+  margin-left: 20px;
+}
+
+#header ul li a
+{
+  text-decoration: 0;
+  padding: 6px 15px;
+  color: #094b65;
+  border-radius: 20px;
+}
+
+#header ul li a.active,
+#header ul li a:hover
+{
+  background: #094b65;
+  color: #fff;
+}
+
+section
+{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* goal of this is to insert transparent transition */
+/* there is no content, so content property is empty */
+
+section::before
+{
+  content:'';
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  /* 100px high is a gradient transition */
+  height: 100px;
+  
+  z-index: 2;
+}
+
+section img
+{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  z-index: -1;
+}
+
+section #text
+{
+  position: absolute;
+  color: #094b65;
+  font-size: 10vw;
+  text-align: center;
+  line-height: 0.55em;
+  font-family: 'Rancho', cursive;
+  transform: translateY(-50%);
+}
+
+section #text span
+{
+  font-size: 0.20em;
+  letter-spacing: 2px;
+  font-weight: 400;
+  font-family: 'Poppins', sans-serif;
+}
+
+#btn
+{
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 30px;
+  background: #fff;
+  color: #094b65;
+  font-size: 1.2em;
+  font-weight: 500;
+  letter-spacing: 2px;
+  border-radius: 40px;
+  transform: translateY(100px);
+}
+
+#btn:hover
+{
+  background: #ffcf4d;
+  border: 1px solid rgba(255, 0, 88, 0.4);
+  box-shadow: 0 1px 15px rgba(1, 1, 1, 0.2);
+}
+
+.sec
+{
+  position: relative;
+  padding: 100px;
+  background: #094b65;
+}
+
+.sec h2
+{
+  font-size: 3.5em;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.sec p
+{
+  font-size: 1em;
+  color: #fff;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+i {
+  opacity: 0;
+  font-size: 18px;
+  color: #fff;
+  will-change: transform;
+  -webkit-transform: scale(0.1);
+  transform: scale(0.1);
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+h2 {
+  pointer-events: none;
+}
+
+body {
+  background-color: #E6E5E1;
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.container .card {
+  position: relative;
+  width: 500px;
+  height: 200px;
+  background-color: #fff;
+  overflow: hidden;
+  margin-bottom: 4px;
+}
+.container .card:before {
+  content: "";
+  z-index: 99;
+  position: absolute;
+  top: -10px;
+  left: 32px;
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 16px;
+  background-color: #E6E5E1;
+}
+.container .card:after {
+  content: "";
+  z-index: 99;
+  position: absolute;
+  bottom: -10px;
+  left: 32px;
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 16px;
+  background-color: #E6E5E1;
+}
+.container .card ul {
+  z-index: 99;
+  position: absolute;
+  left: 39px;
+  top: 5px;
+  list-style-type: none;
+}
+.container .card ul li {
+  width: 2px;
+  height: 2px;
+  border-radius: 2px;
+  margin: 6px 0;
+  background-color: #E6E5E1;
+}
+.container .card h2 {
+  z-index: 99;
+  font-family: "Poppins", sans-serif;
+  position: absolute;
+  bottom: 0;
+  right: 130px;
+  font-size: 60px;
+  font-weight: 700;
+  color: #fff;
+}
+.container .card .fa-arrow-right {
+  z-index: 100;
+  position: absolute;
+  right: 75px;
+  bottom: 25px;
+  font-size: 40px;
+  cursor: pointer;
+}
+.container .card p {
+  z-index: 99;
+  position: absolute;
+  top: 20px;
+  right: 70px;
+  color: #333;
+  opacity: 0.7;
+  font-size: 12px;
+  letter-spacing: 1px;
+  writing-mode: vertical-lr;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.container .card .pic {
+  z-index: 100;
+  width: 400px;
+  height: 200px;
+  background-image: url("https://images.unsplash.com/photo-1504006833117-8886a355efbf?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8bmF0dXJlJTIwYW5kJTIwd2lsZCUyMGFuaW1hbHN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+  background-size: 100% 100%;
+  filter: grayscale(100%);
+}
+.container .card .social {
+  position: absolute;
+  left: 60px;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 180px;
+  height: 64px;
+  border-radius: 80px;
+}
+.container .card .social i:nth-of-type(1) {
+  -webkit-transition-delay: 0.4s;
+  transition-delay: 0.4s;
+}
+.container .card .social i:nth-of-type(2) {
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+.container .card .social i:nth-of-type(3) {
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+.container .card .social i:nth-of-type(4) {
+  -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s;
+}
+.container .card:hover i {
+  opacity: 7;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+.container .card button {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  width: 30px;
+  height: 30px;
+  background-color: #DA4D1D;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease;
+  mix-blend-mode: hard-light;
+}
+.container .card button i {
+  font-size: 3rem;
+}
+.container .card:hover button {
+  transform: scale(16.5);
+}
+.container .card:hover p {
+  color: #fff;
+}
+.container .card:hover .pic {
+  filter: grayscale(0);
+}
+.container .card2 .pic {
+  background-image: url("https://images.unsplash.com/photo-1530955726961-a788ec4b4657?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8dmludGFnZSUyMGNhcnN8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+}
+.container .card2 button {
+  background-color: #2b26c3;
+}
+
+.dr {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  width: 100px;
+}
+
+h1 {
+  color: #ffffff;
+  font-size: 96px;
+  font-weight: 700;
+}
+
+h2 {
+  color: #c9c2c2;
+  font-size: 64px;
+  font-weight: 700;
+}
+
+h6 {
+  color: #D6D6D6;
+  font-size: 24px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+p.description {
+  color: #9c9c9c;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+h1::selection {
+  color: white;
+  background: #272727;
+}
+
+h1::-moz-selection {
+  color: white;
+  background: #272727;
+}
+
+.section {
+  width: 100vw;
+  height: 100vh;
+  min-height: 800px;
+  background: #094b65;
+  position: relative;
+}
+
+.sectionWrapper {
+  width: 85%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+
+
+
+.services h6 {
+  margin-bottom: 5px;
+}
+
+.services h2 {
+  margin-bottom: 15px;
+}
+
+.services .description {
+  margin-bottom: 60px;
+  width: 685px;
+  line-height: 40px;
+}
+
+.services .grid {
+  display: grid;
+  grid-template-columns: 500px 500px;
+  grid-column-gap: 130px;
+  grid-template-rows: 150px 150px;
+  grid-row-gap: 30px;
+}
+
+.services .grid .card {
+  width: 420px;
+  padding: 43px 40px;
+  background: linear-gradient(to bottom right, #696969, #094B65);
+  border-radius: 5px;
+  display: block;
+}
+
+.services .grid .card h3 {
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.services .grid .card p {
+  color: #C3C3C3;
+  font-size: 22px;
+  font-weight: normal;
+}
+
+
+
+@media (max-width: 1280px) {
+  
+  .services .grid {
+    display: grid;
+    grid-template-columns: 500px 500px;
+    grid-column-gap: 50px;
+    grid-template-rows: 150px 150px;
+    grid-row-gap: 30px;
+  }
+}
+
+@media (max-width: 1200px) {
+  
+  .services .sectionWrapper {
+    padding-top: 185px;
+    padding-bottom: 185px;
+  }
+  
+  .services .grid {
+    display: grid;
+    grid-template-columns: 480px;
+    grid-template-rows: 150px 150px;
+    grid-row-gap: 30px;
+  }
+  
+  .services .grid .card {
+    width: 420px;
+    padding: 43px 40px;
+    background: #094B65;
+    border-radius: 5px;
+  }
+}
+
+@media (max-width: 850px) {
+  
+  .services .sectionWrapper {
+    padding-top: 150px;
+    padding-bottom: 150px;
+  }
+  
+  h6 {
+    font-size: 22px;
+  }
+  
+  h2 {
+    font-size: 48px;
+  }
+  
+  .services .description {
+    font-size: 22px;
+    width: initial;
+  }
+  
+  .services .square.blue {
+    width: 75px;
+    height: 75px;
+  }
+   
+   .services .grid {
+    display: grid;
+    grid-template-columns: 85%;
+    grid-template-rows: initial;
+    grid-row-gap: 25px;
+  }
+  
+  .services .grid .card {
+    width: 100%;
+    padding: 31.5px 30px;
+    background: linear-gradient(to bottom right, #696969, #094B65);
+    border-radius: 5px;
+  } 
+
+  .services .grid .card h3 {
+    color: white;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+
+  .services .grid .card p {
+    color: #C3C3C3;
+    font-size: 20px;
+    font-weight: normal;
+  }
+}
+
+.servicehead{
+  background: #094b65;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 5px;
+ 
+}
+
+#gallery {
+  display: grid;
+  height: calc(100vh - 10px);
+  grid-template: repeat(6, 1fr)/repeat(6, 1fr);
+  grid-gap: 0.5em;
+
+}
+@media (max-width: 800px) {
+  #gallery {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  #gallery > div {
+    width: 48%;
+    margin: 1%;
+  }
+}
+@media (max-width: 800px) and (max-width: 350px) {
+  #gallery > div {
+    width: 98%;
+  }
+}
+#gallery > div:nth-child(6n+1) {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+#gallery > div:nth-child(2) {
+  grid-column: span 3;
+  grid-row: span 3;
+}
+#gallery > div:nth-child(4) {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+#gallery > div > a {
+  opacity: 0;
+  position: absolute;
+  color: #000;
+  background-color: #000;
+  font: bold 4em "Helvetica";
+  text-shadow: 0 -1px 5px #fff, -1px 0px 5px #fff, 0 1px 5px #fff, 1px 0px 5px #fff;
+  padding: 2rem;
+  mix-blend-mode: difference;
+  width: 100%;
+  height: 100%;
+  transition: all ease 1s;
+}
+#gallery > div > img {
+  width: 100%;
+  min-height: 100%;
+  transition: all ease 1s;
+}
+#gallery > div:hover img {
+  filter: blur(4px);
+}
+#gallery > div:hover a {
+  opacity: 1;
+}
+#gallery > div {
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#gallery div,
+#gallery a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+[id^=lightbox-] {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  opacity: 0;
+  transition: opacity 450ms ease-in-out;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+[id^=lightbox-]:target {
+  opacity: 1;
+  pointer-events: inherit;
+}
+[id^=lightbox-]:target img {
+  filter: blur(0);
+}
+[id^=lightbox-] .content {
+  max-width: 90%;
+  position: relative;
+  color: #fff;
+}
+[id^=lightbox-] .content:hover > a.close {
+  opacity: 1;
+  transform: scale(1, 1);
+}
+[id^=lightbox-] .content:hover > .title {
+  opacity: 1;
+  transform: translateY(-3px);
+}
+[id^=lightbox-] .content:hover > .title::after {
+  opacity: 1;
+}
+[id^=lightbox-] .content > * {
+  transition: all 450ms ease-in-out;
+}
+[id^=lightbox-] .title {
+  display: block;
+  margin: 0;
+  padding: 1em;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  transform: translateY(50%);
+  font-size: 1.5em;
+  opacity: 0;
+}
+[id^=lightbox-] .title::after {
+  content: " ";
+  background-color: rgba(0, 0, 0, 0.4);
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transition: all 350ms ease-in-out 250ms;
+  opacity: 0;
+  transform-origin: bottom;
+  mix-blend-mode: soft-light;
+}
+[id^=lightbox-] img {
+  max-height: 90vh;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  filter: blur(50px);
+}
+[id^=lightbox-] a.close {
+  width: 2em;
+  height: 2em;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0, 0);
+  opacity: 0;
+  transform-origin: right top;
+  text-decoration: none;
+  color: #fff;
+}
+[id^=lightbox-] a.close::after {
+  content: "X";
+}
+.margin{
+  margin-top:50px;
+margin-bottom:200px;
+}
+
+.contact-form .input-block {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: solid 1px #094b65;;
+
+  height: 60px;
+  padding: 25px;
+  position: relative;
+  margin-bottom: 20px;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+width:900px;
+}
+.contact-form .input-block.focus {
+  background-color: #fff;
+  border: solid 1px #094b65;
+}
+.contact-form .input-block.textarea {
+  height: auto;
+}
+.contact-form .input-block.textarea .form-control {
+  height: auto;
+  resize: none;
+}
+.contact-form .input-block label {
+  position: absolute;
+  left: 25px;
+  top: 25px;
+  display: block;
+  margin: 0;
+  font-weight: 300;
+  z-index: 1;
+  color: #333;
+  font-size: 18px;
+  line-height: 10px;
+}
+.contact-form .input-block .form-control {
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  height: auto;
+  position: relative;
+  z-index: 2;
+  font-size: 18px;
+  color: #333;
+}
+.contact-form .input-block .form-control:focus label {
+  top: 0;
+  max-width:900px;
+}
+.contact-form .square-button {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #094b65;
+  font-size: 26px;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  padding: 0 60px;
+  height: 60px;
+  border: none;
+  width: 100%;
+  max-width:900px;
+}
+.contact-form .square-button:hover, .contact-form .square-button:focus {
+  background-color: white;
+}
+
+@media (min-width: 768px) {
+  .contact-wrap {
+    width: 60%;
+    margin: auto;
+  }
+}
+/*----page styles---*/
+body {
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmNTEyZiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2RkMjQ3NiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -moz-linear-gradient(#094b65);
+  font-family: 'Roboto', sans-serif;
+}
+
+.contact-wrap {
+  padding: 15px;
+}
+
+h1 {
+
+  background-color: white;
+  color: #094b65;
+  padding: 40px;
+  margin: 0 0 50px;
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom:-100px;
+  margin-top:-100px;
+}
+h1 small {
+  font-size: 18px;
+  display: block;
+  text-transform: none;
+  font-weight: 300;
+  margin-top: 10px;
+  color: #094b65;
+}
+body{
+  background:white;
+}
+footer {
+  padding: 1% 5%;
+  text-align: center;
+  background-color: #373B44;
+  color: white;
+}
+footer a {
+  color: white;
+  font-weight: 500;
+  text-decoration: none;
+}
+    </style>
+  </head>
+  <body>
+    <header id="header">
+      <a href="#" class="logo"><IMAGE SRC="Picture2.png" WIDTH="75PX" HEIGHT="60PX"></a>
+      <ul>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Blogs</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </header>
+    
+    <section>
+      <h2 id="text"><span>Welcome To</span><br>The Artsy Lens</h2>
+      
+      <img src="https://drive.google.com/uc?id=1OheESDN1QodxRPvLvRaRRxWcKbn8RW5d" alt="bird1" id="bird1">
+      
+      <img src="https://drive.google.com/uc?id=1dVB79qyy_ED0uVxzINWL3AtCpMShNmk5" alt="bird2" id="bird2">
+      
+      <img src="https://drive.google.com/uc?id=1h_RvHqxijkZRpaJlL80aXzholwUbDF18" alt="forest" id="forest">
+      
+      <a href="#" id="btn">Explore</a>
+      
+      <img src="https://drive.google.com/uc?id=1C4qCUaDw4MnuDV6ofE4pJHzxN-vUpbDw" alt="rocks" id="rocks">
+      
+      <img src="https://drive.google.com/uc?id=1BlnS76cnYYA-rvQBaTAaAngxsxSK7iC1" alt="water" id="water">
+      
+    </section>
+    <div class="sec">
+      <h2>About Us</h2>
+      <p>Greetings, Photography Life is represented by a dedicated and talented team of individuals with professional working experience in photography.   The Artsy Lens works on vintage car and wildlife photographer in India who loves working in warm, clean, and honest Places. We have a soft spot for functional antiques.  Our Company's passion for all things visual began over 3 decades ago. We create and produce a wide range of posters including safety, wellness, anti-bullying, and respectful workplace, as well as a wide assortment of inspirational posters. We specialize in industrial photography and safety and corporate videos doing work primarily for business-to-business clients. </p>
+    </div>
+    <div class="container">
+      <div class="card">
+        <h2>Wildlife</h2>
+        <i class="fas fa-arrow-right"></i>
+        <p>Animal</p>
+        <div class="pic"></div>
+        <ul>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+        <button>
+        </button>
+      </div>
+        <div class="card card2">
+        <h2>Vitage Cars</h2>
+        <i class="fas fa-arrow-right"></i>
+        <p>Cars</p>
+        <div class="pic"></div>
+        <ul>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+        <button>
+        </button>
+      </div>
+    </div>
+  <div class="servicehead">
+    <div class="section services">
+      <div class="sectionWrapper">
+        <h6>what we offer</h6>
+        <h2>Our services</h2>
+        <p class="description">So these are some things our team does.</p>
+        <div class="square blue"></div>
+        <div class="grid">
+          <!-- Web Development -->
+          <div class="card">
+            <h3>Things</h3>
+            <p>Photography For things</p>
+          </div>
+          <!-- Web Design -->
+          <div class="card">
+            <h3>Wildlife And Nature</h3>
+            <p>Photography For Enviournment</p>
+          </div>
+          <!-- Branding -->
+          <div class="card">
+            <h3>Travel</h3>
+            <p>Destinations Photography</p>
+          </div>
+          <!-- Social Media Marketing -->
+          <div class="card">
+            <h3>Function and Studio</h3>
+            <p>Outdoor Photography</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<div class="margin">
+  <div id="gallery">
+    <div><img src="https://picsum.photos/600/600/?image=512"/><a href="#lightbox-1">1</a></div>
+    <div><img src="https://picsum.photos/600/600/?image=513"/><a href="#lightbox-2">2</a></div>
+    <div><img src="https://picsum.photos/600/600/?image=514"/><a href="#lightbox-3">3</a></div>
+    <div><img src="https://picsum.photos/600/600/?image=515"/><a href="#lightbox-4">4</a></div>
+    <div><img src="https://picsum.photos/600/600/?image=516"/><a href="#lightbox-5">5</a></div>
+    <div><img src="https://picsum.photos/600/600/?image=517"/><a href="#lightbox-6">6</a></div>
+    <div><img src="https://picsum.photos/600/600/?image=518"/><a href="#lightbox-7">7</a></div>
+    <div><img src="https://picsum.photos/600/600/?image=519"/><a href="#lightbox-8">8</a></div>
+    <div><img src="https://picsum.photos/600/600/?image=520"/><a href="#lightbox-9">9</a></div>
+    <div><img src="https://picsum.photos/600/600/?image=521"/><a href="#lightbox-10">10</a></div>
+    <div><img src="https://picsum.photos/600/600/?image=522"/><a href="#lightbox-11">11</a></div>
+    <div><img src="https://picsum.photos/600/600/?image=523"/><a href="#lightbox-12">12</a></div>
+    <div><img src="https://picsum.photos/600/600/?image=524"/><a href="#lightbox-13">13</a></div>
+    <div><img src="https://picsum.photos/600/600/?image=525"/><a href="#lightbox-14">14</a></div>
+    <div><img src="https://picsum.photos/600/600/?image=526"/><a href="#lightbox-15">15</a></div>
+    <div><img src="https://picsum.photos/600/600/?image=527"/><a href="#lightbox-16">16</a></div>
+    <div><img src="https://picsum.photos/600/600/?image=528"/><a href="#lightbox-17">17</a></div>
+    <div><img src="https://picsum.photos/600/600/?image=529"/><a href="#lightbox-18">18</a></div>
+  </div>
+  <div class="lightbox" id="lightbox-1">
+    <div class="content"><img src="https://picsum.photos/1920/1080/?image=512"/>
+      <div class="title">No. <b>512</b> from Picsum</div><a class="close" href="#gallery"></a>
+    </div>
+  </div>
+  <div class="lightbox" id="lightbox-2">
+    <div class="content"><img src="https://picsum.photos/1920/1080/?image=513"/>
+      <div class="title">No. <b>513</b> from Picsum</div><a class="close" href="#gallery"></a>
+    </div>
+  </div>
+  <div class="lightbox" id="lightbox-3">
+    <div class="content"><img src="https://picsum.photos/1920/1080/?image=514"/>
+      <div class="title">No. <b>514</b> from Picsum</div><a class="close" href="#gallery"></a>
+    </div>
+  </div>
+  <div class="lightbox" id="lightbox-4">
+    <div class="content"><img src="https://picsum.photos/1920/1080/?image=515"/>
+      <div class="title">No. <b>515</b> from Picsum</div><a class="close" href="#gallery"></a>
+    </div>
+  </div>
+  <div class="lightbox" id="lightbox-5">
+    <div class="content"><img src="https://picsum.photos/1920/1080/?image=516"/>
+      <div class="title">No. <b>516</b> from Picsum</div><a class="close" href="#gallery"></a>
+    </div>
+  </div>
+  <div class="lightbox" id="lightbox-6">
+    <div class="content"><img src="https://picsum.photos/1920/1080/?image=517"/>
+      <div class="title">No. <b>517</b> from Picsum</div><a class="close" href="#gallery"></a>
+    </div>
+  </div>
+  <div class="lightbox" id="lightbox-7">
+    <div class="content"><img src="https://picsum.photos/1920/1080/?image=518"/>
+      <div class="title">No. <b>518</b> from Picsum</div><a class="close" href="#gallery"></a>
+    </div>
+  </div>
+  <div class="lightbox" id="lightbox-8">
+    <div class="content"><img src="https://picsum.photos/1920/1080/?image=519"/>
+      <div class="title">No. <b>519</b> from Picsum</div><a class="close" href="#gallery"></a>
+    </div>
+  </div>
+  <div class="lightbox" id="lightbox-9">
+    <div class="content"><img src="https://picsum.photos/1920/1080/?image=520"/>
+      <div class="title">No. <b>520</b> from Picsum</div><a class="close" href="#gallery"></a>
+    </div>
+  </div>
+  <div class="lightbox" id="lightbox-10">
+    <div class="content"><img src="https://picsum.photos/1920/1080/?image=521"/>
+      <div class="title">No. <b>521</b> from Picsum</div><a class="close" href="#gallery"></a>
+    </div>
+  </div>
+  <div class="lightbox" id="lightbox-11">
+    <div class="content"><img src="https://picsum.photos/1920/1080/?image=522"/>
+      <div class="title">No. <b>522</b> from Picsum</div><a class="close" href="#gallery"></a>
+    </div>
+  </div>
+  <div class="lightbox" id="lightbox-12">
+    <div class="content"><img src="https://picsum.photos/1920/1080/?image=523"/>
+      <div class="title">No. <b>523</b> from Picsum</div><a class="close" href="#gallery"></a>
+    </div>
+  </div>
+  <div class="lightbox" id="lightbox-13">
+    <div class="content"><img src="https://picsum.photos/1920/1080/?image=524"/>
+      <div class="title">No. <b>524</b> from Picsum</div><a class="close" href="#gallery"></a>
+    </div>
+  </div>
+  <div class="lightbox" id="lightbox-14">
+    <div class="content"><img src="https://picsum.photos/1920/1080/?image=525"/>
+      <div class="title">No. <b>525</b> from Picsum</div><a class="close" href="#gallery"></a>
+    </div>
+  </div>
+  <div class="lightbox" id="lightbox-15">
+    <div class="content"><img src="https://picsum.photos/1920/1080/?image=526"/>
+      <div class="title">No. <b>526</b> from Picsum</div><a class="close" href="#gallery"></a>
+    </div>
+  </div>
+  <div class="lightbox" id="lightbox-16">
+    <div class="content"><img src="https://picsum.photos/1920/1080/?image=527"/>
+      <div class="title">No. <b>527</b> from Picsum</div><a class="close" href="#gallery"></a>
+    </div>
+  </div>
+  <div class="lightbox" id="lightbox-17">
+    <div class="content"><img src="https://picsum.photos/1920/1080/?image=528"/>
+      <div class="title">No. <b>528</b> from Picsum</div><a class="close" href="#gallery"></a>
+    </div>
+  </div>
+  <div class="lightbox" id="lightbox-18">
+    <div class="content"><img src="https://picsum.photos/1920/1080/?image=529"/>
+      <div class="title">No. <b>529</b> from Picsum</div><a class="close" href="#gallery"></a>
+    </div>
+  </div>
+</div>
+<h1> Contact Us Form
+  <small>Get In Touch</small>
+</h1>
+<section class="contact-wrap">
+  <form action="" class="contact-form">
+    <div class="col-sm-6">
+      <div class="input-block">
+        <label for="">First Name</label>
+        <input type="text" class="form-control">
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="input-block">
+        <label for="">Last Name</label>
+        <input type="text" class="form-control">
+      </div>
+    </div>
+    <div class="col-sm-12">
+      <div class="input-block">
+        <label for="">Email</label>
+        <input type="text" class="form-control">
+      </div>
+    </div>
+    <div class="col-sm-12">
+      <div class="input-block">
+        <label for="">Message Subject</label>
+        <input type="text" class="form-control">
+      </div>
+    </div>
+    <div class="col-sm-12">
+      <div class="input-block textarea">
+        <label for="">Drop your message here</label>
+        <textarea rows="3" type="text" class="form-control"></textarea>
+      </div>
+    </div>
+    <div class="col-sm-12">
+      <button class="square-button">Send</button>
+    </div>
+  </form>
+</section>
+<footer>
+  Made by <a href="#">The Artsy Lens</a>
+</footer>
+
+  <script>
+let text = document.getElementById('text');
+let bird1 = document.getElementById('bird1');
+let bird2 = document.getElementById('bird2');
+let btn = document.getElementById('btn');
+let rocks = document.getElementById('rocks');
+let forest = document.getElementById('forest');
+let water = document.getElementById('water');
+let header = document.getElementById('header');
+  
+window.addEventListener('scroll', function(){
+
+let value = window.scrollY;
+    
+text.style.top = 50 + value * -0.1 + '%';
+bird1.style.top = 10 + value * -0.2 + 'px';
+bird1.style.left = value * 1.3 + 'px';
+bird2.style.top = 50 + value * -0.5 + 'px';
+bird2.style.left = value * -5 + 'px';
+btn.style.marginTop = value * 1.5 + 'px';
+rocks.style.top = value * -0.12 + 'px';
+forest.style.top = value * 0.25 + 'px';
+
+header.style.top = value * 0.5 + 'px';
+})
+
+  </script>
+  </body>
+</html>
